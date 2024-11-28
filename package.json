@@ -1,22 +1,31 @@
 {
   "name": "nuxt-app",
-  "private": true,
   "type": "module",
+  "private": true,
+  "packageManager": "pnpm@9.14.2+sha512.6e2baf77d06b9362294152c851c4f278ede37ab1eba3a55fda317a4a17b209f4dbb973fb250a77abc463a341fcb1f17f17cfa24091c4eb319cda0d9b84278387",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "typecheck": "vue-tsc --noEmit"
+    "typecheck": "vue-tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
-    "nuxt": "^3.14.1592"
+    "nuxt": "^3.14.1592",
+    "nuxt-security": "^2.1.4"
   },
-  "packageManager": "pnpm@9.14.2+sha512.6e2baf77d06b9362294152c851c4f278ede37ab1eba3a55fda317a4a17b209f4dbb973fb250a77abc463a341fcb1f17f17cfa24091c4eb319cda0d9b84278387",
   "devDependencies": {
+    "@antfu/eslint-config": "^3.10.0",
+    "@nuxt/eslint": "^0.7.2",
+    "@unocss/eslint-config": "^0.64.1",
     "@unocss/nuxt": "^0.64.1",
+    "eslint": "^9.15.0",
+    "eslint-plugin-format": "^0.1.2",
+    "std-env": "^3.8.0",
     "typescript": "^5.7.2",
     "unocss": "^0.64.1",
     "vite-plugin-vuetify": "^2.0.4",
