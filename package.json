@@ -7,11 +7,14 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "typecheck": "vue-tsc --noEmit",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "test:e2e": "cypress open",
+    "test:unit": "vitest",
+    "test:unit:ci": "vitest --run",
+    "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
@@ -23,6 +26,7 @@
     "@nuxt/eslint": "^0.7.2",
     "@unocss/eslint-config": "^0.64.1",
     "@unocss/nuxt": "^0.64.1",
+    "cypress": "^13.16.0",
     "eslint": "^9.15.0",
     "eslint-plugin-format": "^0.1.2",
     "std-env": "^3.8.0",
