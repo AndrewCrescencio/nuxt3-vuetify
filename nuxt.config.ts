@@ -1,4 +1,4 @@
-import { isCI, isDevelopment, isWindows } from 'std-env'
+import { isDevelopment, isWindows } from 'std-env'
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config

@@ -8,9 +8,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint:fix": "eslint . --fix --quiet",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
+    "postinstall": "nuxt prepare && npx simple-git-hooks",
     "test:e2e": "cypress open",
     "test:unit": "vitest",
     "test:unit:ci": "vitest --run",
@@ -29,6 +29,8 @@
     "cypress": "^13.16.0",
     "eslint": "^9.15.0",
     "eslint-plugin-format": "^0.1.2",
+    "lint-staged": "^15.2.10",
+    "simple-git-hooks": "^2.11.1",
     "std-env": "^3.8.0",
     "typescript": "^5.7.2",
     "unocss": "^0.64.1",
@@ -40,5 +42,11 @@
     "patchedDependencies": {
       "vue-tsc@2.1.10": "patches/vue-tsc@2.1.10.patch"
     }
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }
