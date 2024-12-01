@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     },
     ...(isDevelopment || isWindows) ? [] : ['nuxt-security'],
     '@nuxt/eslint',
+    '@nuxt/test-utils/module',
     '@unocss/nuxt',
   ],
   ssr: false,
