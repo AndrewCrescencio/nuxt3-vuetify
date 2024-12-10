@@ -15,7 +15,8 @@
     "test:unit": "vitest --ui",
     "test:unit:ci": "vitest --run",
     "coverage:unit": "vitest run --coverage",
-    "typecheck": "vue-tsc --noEmit"
+    "typecheck": "vue-tsc --noEmit",
+    "sizecheck": "npx nuxi analyze"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
